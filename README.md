@@ -4,6 +4,7 @@ To begin the project I uploaded all CSV files into Power BI and then shaped the 
 
 # Creating the Data Model:
 In the relationships view I connected transaction data to the customers, products and stores lookup tables using primary and foreign keys. I connected the transaction data to the calendar lookup table using an active and inactive relationship. I connected the return data to the products, calendar and stores data tables using primary and foreign keys and then connected the stores data to the regions data lookup table as a snowflake schema. Once all of my tables were connected, I ensured all relationships were one-to-many and that the filters were flowing one way and downstream to the primary data table. I also made sure all data tables were connected via shared lookup tables and not directly to each other.
+
 ![Model View](https://github.com/npnga02/Maven-Market-Analysis-Power-BI/assets/168510844/986b8c0f-69aa-480b-ad3d-8d0f32c83d8e)
 
 # Adding DAX Measures:
@@ -44,4 +45,5 @@ Last Months Returns = CALCULATE(Return_Data[Total Returns], DATEADD('Calendar'[d
 
 # Creating Visuals:
 To begin building my visual I started with the main matrix which contains total transactions, total profit, profit margin and return rate by product brand. I applied a Top N filter to only show the top 30 product brands by total transactions. I added three KPI cards to show current month transactions, profit and returns. I then added the map which you can filter down by country. Next to the map I added a tree chart which enables the viewer to drill down to specific cities within each country if they choose to do so. I added a bar chart to show revenue over time and a revenue target meter for the latest month worth of sales.
+
 <img width="899" alt="MavenMarket" src="https://github.com/npnga02/Maven-Market-Analysis-Power-BI/assets/168510844/2a0484eb-fd32-4c10-a55e-04ad035c3c94">
